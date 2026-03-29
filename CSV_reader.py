@@ -10,5 +10,6 @@ if student_name:
     result = df[df["Name"].str.strip().str.lower() == student_name.strip().lower()]
     if not result.empty:
         st.write("Here is the data for", student_name)
+        st.dataframe(result)
     else:
         st.warning("No student found with that name")
